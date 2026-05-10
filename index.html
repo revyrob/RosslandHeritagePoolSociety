@@ -70,7 +70,7 @@
         <p class="hero-sub">Rossland, British Columbia</p>
         <h1>Rossland<br /><span>Heritage</span><br />Pool Society</h1>
         <div class="hero-ctas">
-          <a href="#shop" class="btn btn-primary">Shop & Events</a>
+          <a href="#support" class="btn btn-primary">Support Us</a>
           <a href="#about" class="btn btn-outline">Learn More</a>
         </div>
       </div>
@@ -101,12 +101,12 @@
               in Rossland.
             </p>
             <br />
-            <a
+            <!-- <a
               href="#shop"
               class="btn btn-primary"
               style="display: inline-block; margin-top: 0.5rem"
               >Support Us →</a
-            >
+            > -->
           </div>
           <div class="about-visual">
             <div class="pool-card">
@@ -159,19 +159,18 @@
     </div>
 
     <!-- SHOP & EVENTS -->
-    <section class="links-section" id="shop">
+    <section class="links-section" id="support">
       <div class="container">
         <p class="section-label">Support the Society</p>
-        <h2 class="section-title">Shop & <em>Events</em></h2>
+        <h2 class="section-title">Donate & <em>Volunteer</em></h2>
         <p class="section-body">
-          Every purchase and ticket sold goes directly toward restoring
-          Rossland's pool. Visit our Square site to browse merch and upcoming
-          events.
+          Every donation goes directly toward helping to keep Rossland's pool.
+          Volunteers are always needed for grant writing and events.
         </p>
 
         <div class="links-grid">
           <!-- Merchandise card -->
-          <a
+          <!-- <a
             href="https://square.site"
             target="_blank"
             class="link-card"
@@ -185,10 +184,22 @@
               Rossland's pool with pride.
             </p>
             <span class="link-card-arrow">Shop Now</span>
-          </a>
+          </a> -->
+          <div class="link-card">
+            <div class="link-card-accent"></div>
+            <div class="link-card-icon">👕</div>
+            <h3>Donate</h3>
+            <p class="section-label">e-transfer</p>
+            <p>savethepoolrossland@gmail.com</p>
+            <p class="section-label">Send cheque</p>
+            <p>
+              Made out to Rossland Heritage Pool society. Mail to PO Box 921,
+              Rossland, BC, V0G 1Y0
+            </p>
+          </div>
 
           <!-- Events card -->
-          <a
+          <!-- <a
             href="https://square.site"
             target="_blank"
             class="link-card"
@@ -202,7 +213,13 @@
               your tickets and join us.
             </p>
             <span class="link-card-arrow">View Events</span>
-          </a>
+          </a> -->
+          <div class="link-card">
+            <div class="link-card-accent"></div>
+            <div class="link-card-icon">🏊</div>
+            <h3>Volunteer</h3>
+            <p>Contact us at savethepoolrossland@gmail.com.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -258,6 +275,12 @@
           "Replace this with your Square events URL!\n\nUpdate the href on the Events card to your Square site link.",
         );
       }
+      const modal = document.getElementById("myModal");
+      const openBtn = document.getElementById("openModal");
+      const closeBtn = document.getElementById("closeModal");
+
+      openBtn.addEventListener("click", () => modal.showModal());
+      closeBtn.addEventListener("click", () => modal.close());
     </script>
   </body>
 </html>
