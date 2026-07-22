@@ -129,17 +129,26 @@
                   Community funded & volunteer driven
                 </div>
               </div>
-              <div class="pool-stats-row">
-                <div class="pool-stat">
-                  <div class="pool-stat-num" style="font-size: 2.4rem">1</div>
-                  <div class="pool-stat-label">Historic pool to restore</div>
-                </div>
-                <div class="pool-stat">
-                  <div class="pool-stat-num" style="font-size: 2.4rem">∞</div>
-                  <div class="pool-stat-label">Summers worth saving</div>
+              <!-- <div class="pool-stats-row"> -->
+              <div class="pool-stat">
+                <div class="pool-stat-num" style="font-size: 2.4rem">1</div>
+                <div class="pool-stat-label">Historic pool to restore</div>
+              </div>
+              <div class="pool-stat-num" style="font-size: 1.6rem">
+                The Science Behind Swimming
+
+                <div class="pool-stat-label">
+                  <button
+                    type="button"
+                    id="openModal"
+                    class="pool-stat-label pool-stat-link"
+                  >
+                    Read More
+                  </button>
                 </div>
               </div>
             </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -268,6 +277,43 @@
       © 2026 Rossland Heritage Pool Society &nbsp;·&nbsp; Rossland, BC
     </footer>
 
+    <!-- ARTICLE MODAL -->
+    <dialog id="myModal" class="article-modal">
+      <div class="article-modal-header">
+        <div>
+          <p class="article-modal-kicker">CMAJ &middot; June 29, 2026</p>
+          <h3>What pool closures in Canada mean for health</h3>
+        </div>
+        <button
+          type="button"
+          id="closeModal"
+          class="article-modal-close"
+          aria-label="Close"
+        >
+          &times;
+        </button>
+      </div>
+      <iframe
+        src="assets/documents/pool-closures-cmaj.pdf"
+        title="What pool closures in Canada mean for health (CMAJ)"
+        class="article-modal-frame"
+      ></iframe>
+      <div class="article-modal-footer">
+        <a
+          href="assets/documents/pool-closures-cmaj.pdf"
+          target="_blank"
+          class="btn btn-outline"
+          >Open in new tab</a
+        >
+        <a
+          href="assets/documents/pool-closures-cmaj.pdf"
+          download
+          class="btn btn-primary"
+          >Download PDF</a
+        >
+      </div>
+    </dialog>
+
     <script>
       // Sticky nav
       const nav = document.getElementById("nav");
@@ -294,6 +340,9 @@
 
       openBtn.addEventListener("click", () => modal.showModal());
       closeBtn.addEventListener("click", () => modal.close());
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.close();
+      });
     </script>
   </body>
 </html>

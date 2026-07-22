@@ -285,6 +285,91 @@ section {
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
+.pool-stat-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-align: left;
+   font-family: "DM Sans", sans-serif;
+}
+.pool-stat-link:hover {
+  color: var(--blue);
+}
+
+/* ── ARTICLE MODAL ── */
+.article-modal {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  width: min(800px, 92vw);
+  height: min(85vh, 900px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+.article-modal::backdrop {
+  background: rgba(15, 26, 32, 0.65);
+}
+.article-modal {
+  display: none;
+  flex-direction: column;
+}
+.article-modal[open] {
+  display: flex;
+}
+.article-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--cream);
+}
+.article-modal-kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+.article-modal-header h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+.article-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.article-modal-close:hover {
+  color: var(--text);
+}
+.article-modal-frame {
+  flex: 1;
+  width: 100%;
+  border: none;
+}
+.article-modal-footer {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--cream);
+}
+.article-modal-footer .btn-outline {
+  color: var(--text);
+  border-color: var(--muted);
+}
+.article-modal-footer .btn-outline:hover {
+  border-color: var(--text);
+}
 
 /* ── LINKS / SQUARE ── */
 .links-section {
